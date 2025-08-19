@@ -1,0 +1,10 @@
+[id^="headlessui-popover-button"] p.text-lg {
+  filter: blur(0);
+  transition: filter 0.3s;
+  transition-delay: 2s;
+}
+
+[id^="headlessui-popover-button"]:hover p.text-lg {
+  filter: blur(4px);
+  transition-delay: 1s;
+}
