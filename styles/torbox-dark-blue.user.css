@@ -1,50 +1,68 @@
 /* ==UserStyle==
-@name           torbox dark blue
+@name           torbox.app/dashboard
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
 @description    A new userstyle
 @author         Me
 ==/UserStyle== */
+@-moz-document url-prefix("https://torbox.app") {
 
-@-moz-document url-prefix("https://torbox.app/dashboard") {
-
- /* ===== VARIABLES ===== */
+  /* ===== VARIABLES ===== */
   * {
     /* Backgrounds */
-    --color-bg: #22313f;       /* main background */
-    --color-bg-alt: #34495e;   /* secondary background */
-    --color-surface: #2c2e31;  /* panels, cards, etc. */
-    
+    --color-bg: #22313f;
+    /* main background */
+    --color-bg-alt: #34495e;
+    /* secondary background */
+    --color-surface: #2c2e31;
+    /* panels, cards, etc. */
     /* Text */
-    --color-text: #d1d0c5;     /* main text */
-    --color-text-sub: #e4f1fe; /* lighter text, subtitles */
-    --color-text-muted: #95a5a6; /* muted/secondary text */
-    
+    --color-text: #d1d0c5;
+    /* main text */
+    --color-text-sub: #e4f1fe;
+    /* lighter text, subtitles */
+    --color-text-muted: #95a5a6;
+    /* muted/secondary text */
     /* Accent & Interactive */
-    --color-accent: #8dc6ff;   /* caret, highlights */
-    --color-accent-hover: #a8d3ff; /* hover states */
-    --color-accent-dark: #5dade2; /* darker accent variant */
-    
+    --color-accent: #8dc6ff;
+    /* caret, highlights */
+    --color-accent-hover: #a8d3ff;
+    /* hover states */
+    --color-accent-dark: #5dade2;
+    /* darker accent variant */
     /* Status Colors */
-    --color-success: #27ae60;  /* green for active/ready states */
-    --color-success-bg: #1e8449; /* darker green for backgrounds */
-    --color-warning: #f39c12;  /* orange/yellow for warnings */
-    --color-warning-bg: #d68910; /* darker orange */
-    --color-error: #ca4754;    /* red for errors */
-    --color-error-dark: #7e2a33; /* darker red */
-    
+    --color-success: #27ae60;
+    /* green for active/ready states */
+    --color-success-bg: #1e8449;
+    /* darker green for backgrounds */
+    --color-warning: #f39c12;
+    /* orange/yellow for warnings */
+    --color-warning-bg: #d68910;
+    /* darker orange */
+    --color-error: #ca4754;
+    /* red for errors */
+    --color-error-dark: #7e2a33;
+    /* darker red */
     /* UI Elements */
-    --color-border: #40566d;   /* borders, dividers */
-    --color-border-light: #52708a; /* lighter borders */
-    --color-input: #2c3e50;    /* input fields */
-    --color-input-focus: #34495e; /* focused inputs */
-    
+    --color-border: #40566d;
+    /* borders, dividers */
+    --color-border-light: #52708a;
+    /* lighter borders */
+    --color-input: #2c3e50;
+    /* input fields */
+    --color-input-focus: #34495e;
+    /* focused inputs */
     /* Special Elements */
-    --color-badge: #3498db;    /* badges, tags */
-    --color-badge-private: #9b59b6; /* private torrents */
-    --color-cached: #17a2b8;   /* cached downloads */
-    --color-progress: #2ecc71; /* progress bars */
-    --color-graph: #16a085;    /* charts/graphs */
+    --color-badge: #3498db;
+    /* badges, tags */
+    --color-badge-private: #9b59b6;
+    /* private torrents */
+    --color-cached: #17a2b8;
+    /* cached downloads */
+    --color-progress: #2ecc71;
+    /* progress bars */
+    --color-graph: #16a085;
+    /* charts/graphs */
   }
 
   /* ===== ROOT STYLING ===== */
@@ -54,19 +72,29 @@
   }
 
   /* ===== ICONS ===== */
-  .fill-white, .text-white {
+  .fill-white,
+  .text-white {
     fill: var(--color-accent) !important;
     color: var(--color-accent) !important;
   }
-    
-   /* ===== POP-UPS ===== */
-    [id^="headlessui-menu-items"] {
-        background-color: var(--color-bg-alt)
-    }
-    
+
+  /* ===== POP-UPS ===== */
+  [id^="headlessui-menu-items"] {
+    background-color: var(--color-bg-alt)
+  }
+
+  [id^="headlessui-popover-panel"] {
+    background-color: var(--color-bg)
+  }
+
+  [id^="headlessui-popover-panel"] div button {
+    border-color: var(--color-accent-dark);
+  }
+
 
   /* ===== LAYOUT CONTAINERS ===== */
-  .sidebar, .downloads {
+  .sidebar,
+  .downloads {
     background-color: var(--color-bg-alt) !important;
   }
 
@@ -77,15 +105,18 @@
 
   /* ===== HEADER STATISTICS ===== */
   .downloads .sticky .flex > div:last-child span {
-    color: var(--color-error-dark) !important;  /* inactive downloads */
+    color: var(--color-error-dark) !important;
+    /* inactive downloads */
   }
-  
+
   .downloads .sticky .flex > div:first-child span {
-    color: var(--color-success) !important;     /* active downloads */
+    color: var(--color-success) !important;
+    /* active downloads */
   }
-  
+
   .downloads .sticky .flex > div:nth-child(2) span {
-    color: var(--color-accent) !important;      /* total downloads */
+    color: var(--color-accent) !important;
+    /* total downloads */
   }
 
   /* ===== DOWNLOAD CARDS ===== */
@@ -96,19 +127,23 @@
 
   /* ===== STATUS BADGES ===== */
   .flex.flex-wrap.gap-3.items-center p.bg-gray-500 {
-    background-color: var(--color-badge) !important;         /* torrent */
+    background-color: var(--color-badge) !important;
+    /* torrent */
   }
-  
+
   .flex.flex-wrap.gap-3.items-center p.bg-indigo-500 {
-    background-color: var(--color-badge-private) !important; /* private */
+    background-color: var(--color-badge-private) !important;
+    /* private */
   }
-  
+
   .flex.flex-wrap.gap-3.items-center p.bg-\[\#04BF8A\] {
-    background-color: var(--color-success) !important;       /* download ready */
+    background-color: var(--color-success) !important;
+    /* download ready */
   }
-  
+
   .flex.flex-wrap.gap-3.items-center p.bg-blue-500 {
-    background-color: var(--color-cached) !important;        /* cached */
+    background-color: var(--color-cached) !important;
+    /* cached */
   }
 
   /* ===== ACTION BUTTONS ===== */
@@ -116,7 +151,7 @@
     background: none !important;
     background-color: var(--color-success-bg) !important;
   }
-  
+
   .downloads button.rounded-md.font-bold:hover {
     background-color: var(--color-success) !important;
   }
@@ -126,21 +161,27 @@
   a.rounded-md.p-2.w-full.bg-red-500 {
     background-color: var(--color-error) !important;
   }
-  
+
   a.rounded-md.p-2.w-full.bg-red-500:hover {
     background-color: var(--color-error-dark) !important;
   }
 
   /* Hide explore addons button */
   a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
-    background-color: var(--color-warning-bg); 
+    background-color: var(--color-warning-bg);
   }
-    
+
   a.rounded-md.p-2.w-full.bg-\[\#F59E0B\]:hover {
-    background-color: var(--color-warning); 
+    background-color: var(--color-warning);
+  }
+
+  /* ===== FOOTER===== */
+  footer {
+    background-color: var(--color-bg);
   }
 
   /* ===== OPTIONAL EFFECTS ===== */
+  
   /* Blur effect on download titles */
   [id^="headlessui-popover-button"] p.text-lg {
     filter: blur(0);
@@ -152,5 +193,12 @@
     filter: blur(4px);
     transition-delay: 1s;
   }
+  /* Hide sidebar */
+  main {
+    grid-template-columns: none !important;
+  }
 
+  div.relative.sidebar {
+    display: none;
+  }
 }
