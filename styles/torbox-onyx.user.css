@@ -212,4 +212,28 @@
     background-color: var(--color-bg) !important;
     border-top: 1px solid var(--color-border) !important;
   }
+
+  /* ===== FORM ===== */
+  form.bg-\[\#0f1117\] > div {
+    background-color: var(--color-bg-alt) !important;
+  }
+  textarea, input {
+    background-color: var(--color-input) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+  }
+  textarea:focus, input:focus {
+    background-color: var(--color-input-focus) !important;
+    border-color: var(--color-accent) !important;
+    outline: none !important;
+  }
+  button.relative.block.w-full {
+    background-color: var(--color-success-bg) !important;
+    color: var(--color-text) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+  button.relative.block.w-full:hover {
+    background-color: var(--color-success) !important;
+    border-color: var(--color-accent) !important;
+  }
 }
