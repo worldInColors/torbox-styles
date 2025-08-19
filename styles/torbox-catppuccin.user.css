@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name           Torbox Dark Blue Theme
+@name           Torbox Catppuccin Theme
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
-@description    A new userstyle
+@description    Catppuccin-inspired theme with soft pastels
 @author         Me
 ==/UserStyle== */
 @-moz-document url-prefix("https://torbox.app") {
@@ -10,59 +10,61 @@
   /* ===== VARIABLES ===== */
   * {
     /* Backgrounds */
-    --color-bg: #22313f;
-    /* main background */
-    --color-bg-alt: #34495e;
-    /* secondary background */
-    --color-surface: #2c2e31;
-    /* panels, cards, etc. */
+    --color-bg: #1e1e2e;
+    /* main background - catppuccin base */
+    --color-bg-alt: #313244;
+    /* secondary background - catppuccin surface0 */
+    --color-surface: #45475a;
+    /* panels, cards, etc. - catppuccin surface1 */
+    
     /* Text */
-    --color-text: #d1d0c5;
-    /* main text */
-    --color-text-sub: #e4f1fe;
-    /* lighter text, subtitles */
-    --color-text-muted: #95a5a6;
-    /* muted/secondary text */
+    --color-text: #cdd6f4;
+    /* main text - catppuccin text */
+    --color-text-sub: #f38ba8;
+    /* lighter text, subtitles - catppuccin pink */
+    --color-text-muted: #a6adc8;
+    /* muted/secondary text - catppuccin subtext0 */
     /* Accent & Interactive */
-    --color-accent: #8dc6ff;
-    /* caret, highlights */
-    --color-accent-hover: #a8d3ff;
-    /* hover states */
-    --color-accent-dark: #5dade2;
-    /* darker accent variant */
+    --color-accent: #cba6f7;
+    /* caret, highlights - catppuccin mauve */
+    --color-accent-hover: #ddb6f2;
+    /* hover states - lighter mauve */
+    --color-accent-dark: #b4befe;
+    /* darker accent variant - catppuccin lavender */
+    
     /* Status Colors */
-    --color-success: #27ae60;
-    /* green for active/ready states */
-    --color-success-bg: #1e8449;
+    --color-success: #a6e3a1;
+    /* green for active/ready states - catppuccin green */
+    --color-success-bg: #40a02b;
     /* darker green for backgrounds */
-    --color-warning: #f39c12;
-    /* orange/yellow for warnings */
-    --color-warning-bg: #d68910;
-    /* darker orange */
-    --color-error: #ca4754;
-    /* red for errors */
-    --color-error-dark: #7e2a33;
-    /* darker red */
+    --color-warning: #f9e2af;
+    /* orange/yellow for warnings - catppuccin yellow */
+    --color-warning-bg: #df8e1d;
+    /* darker yellow */
+    --color-error: #f38ba8;
+    /* red for errors - catppuccin pink */
+    --color-error-dark: #e64553;
+    /* darker red - catppuccin red */
     /* UI Elements */
-    --color-border: #40566d;
-    /* borders, dividers */
-    --color-border-light: #52708a;
-    /* lighter borders */
-    --color-input: #2c3e50;
+    --color-border: #585b70;
+    /* borders, dividers - catppuccin surface2 */
+    --color-border-light: #6c7086;
+    /* lighter borders - catppuccin overlay0 */
+    --color-input: #313244;
     /* input fields */
-    --color-input-focus: #34495e;
+    --color-input-focus: #45475a;
     /* focused inputs */
     /* Special Elements */
-    --color-badge: #3498db;
-    /* badges, tags */
-    --color-badge-private: #9b59b6;
-    /* private torrents */
-    --color-cached: #17a2b8;
-    /* cached downloads */
-    --color-progress: #2ecc71;
-    /* progress bars */
-    --color-graph: #16a085;
-    /* charts/graphs */
+    --color-badge: #89b4fa;
+    /* badges, tags - catppuccin blue */
+    --color-badge-private: #cba6f7;
+    /* private torrents - catppuccin mauve */
+    --color-cached: #94e2d5;
+    /* cached downloads - catppuccin teal */
+    --color-progress: #a6e3a1;
+    /* progress bars - catppuccin green */
+    --color-graph: #fab387;
+    /* charts/graphs - catppuccin peach */
   }
 
   /* ===== ROOT STYLING ===== */
@@ -154,6 +156,7 @@
 
   .downloads button.rounded-md.font-bold:hover {
     background-color: var(--color-success) !important;
+    color: var(--color-text-muted) !important;
   }
 
   /* ===== PLAN EXPIRATION ===== */
@@ -166,7 +169,7 @@
     background-color: var(--color-error-dark) !important;
   }
 
-  /* Hide explore addons button */
+  /* Explore addons button*/
   a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
     background-color: var(--color-warning-bg);
   }
@@ -181,7 +184,6 @@
   }
 
   /* ===== OPTIONAL EFFECTS ===== */
-  
   /* Blur effect on download titles */
   [id^="headlessui-popover-button"] p.text-lg {
     filter: blur(0);

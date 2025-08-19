@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name           Torbox Dark Blue Theme
+@name           Torbox Amber Theme
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
-@description    A new userstyle
+@description    Warm amber variant of torbox theme
 @author         Me
 ==/UserStyle== */
 @-moz-document url-prefix("https://torbox.app") {
@@ -10,25 +10,25 @@
   /* ===== VARIABLES ===== */
   * {
     /* Backgrounds */
-    --color-bg: #22313f;
-    /* main background */
-    --color-bg-alt: #34495e;
-    /* secondary background */
-    --color-surface: #2c2e31;
+    --color-bg: #2d1810;
+    /* main background - dark brown */
+    --color-bg-alt: #3d2317;
+    /* secondary background - warmer brown */
+    --color-surface: #342218;
     /* panels, cards, etc. */
     /* Text */
-    --color-text: #d1d0c5;
-    /* main text */
-    --color-text-sub: #e4f1fe;
+    --color-text: #f4e4c7;
+    /* main text - warm cream */
+    --color-text-sub: #fff3d4;
     /* lighter text, subtitles */
-    --color-text-muted: #95a5a6;
-    /* muted/secondary text */
+    --color-text-muted: #c7a876;
+    /* muted/secondary text - muted gold */
     /* Accent & Interactive */
-    --color-accent: #8dc6ff;
-    /* caret, highlights */
-    --color-accent-hover: #a8d3ff;
-    /* hover states */
-    --color-accent-dark: #5dade2;
+    --color-accent: #ffb347;
+    /* caret, highlights - warm orange */
+    --color-accent-hover: #ffc77a;
+    /* hover states - lighter orange */
+    --color-accent-dark: #e67e22;
     /* darker accent variant */
     /* Status Colors */
     --color-success: #27ae60;
@@ -39,30 +39,30 @@
     /* orange/yellow for warnings */
     --color-warning-bg: #d68910;
     /* darker orange */
-    --color-error: #ca4754;
+    --color-error: #e74c3c;
     /* red for errors */
-    --color-error-dark: #7e2a33;
+    --color-error-dark: #c0392b;
     /* darker red */
     /* UI Elements */
-    --color-border: #40566d;
-    /* borders, dividers */
-    --color-border-light: #52708a;
+    --color-border: #5d3a24;
+    /* borders, dividers - warm brown */
+    --color-border-light: #7a4d32;
     /* lighter borders */
-    --color-input: #2c3e50;
+    --color-input: #3d2817;
     /* input fields */
-    --color-input-focus: #34495e;
+    --color-input-focus: #4a3020;
     /* focused inputs */
     /* Special Elements */
-    --color-badge: #3498db;
-    /* badges, tags */
-    --color-badge-private: #9b59b6;
-    /* private torrents */
-    --color-cached: #17a2b8;
-    /* cached downloads */
+    --color-badge: #e67e22;
+    /* badges, tags - burnt orange */
+    --color-badge-private: #8e44ad;
+    /* private torrents - purple */
+    --color-cached: #f39c12;
+    /* cached downloads - amber */
     --color-progress: #2ecc71;
     /* progress bars */
-    --color-graph: #16a085;
-    /* charts/graphs */
+    --color-graph: #d35400;
+    /* charts/graphs - dark orange */
   }
 
   /* ===== ROOT STYLING ===== */
@@ -181,7 +181,6 @@
   }
 
   /* ===== OPTIONAL EFFECTS ===== */
-  
   /* Blur effect on download titles */
   [id^="headlessui-popover-button"] p.text-lg {
     filter: blur(0);

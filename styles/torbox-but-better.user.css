@@ -1,0 +1,282 @@
+/* ==UserStyle==
+@name           Torbox Real-Debrid theme
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Old-school Real-Debrid look with sharp corners and 2000s vibes
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://torbox.app") {
+
+  /* ===== VARIABLES ===== */
+  * {
+    --color-bg: #f5f5f5;
+    /* Main background - light gray like old sites */
+    --color-bg-alt: #e8e8e8;
+    /* Secondary background - darker gray */
+    --color-surface: #ffffff;
+    /* Panels, cards, etc. - stark white */
+    --color-text: #333333;
+    /* Main text - dark gray */
+    --color-text-sub: #000000;
+    /* Subtitles - black */
+    --color-text-muted: #666666;
+    /* Muted/secondary text */
+    --color-accent: #0066cc;
+    /* Caret, highlights - classic web blue */
+    --color-accent-hover: #0052a3;
+    /* Hover states */
+    --color-accent-dark: #004080;
+    /* Darker accent variant */
+    --color-success: #009900;
+    /* Green for active/ready states */
+    --color-success-bg: #ccffcc;
+    /* Light green backgrounds */
+    --color-warning: #ff9900;
+    /* Orange for warnings */
+    --color-warning-bg: #ffffcc;
+    /* Light yellow */
+    --color-error: #cc0000;
+    /* Red for errors */
+    --color-error-dark: #990000;
+    /* Darker red */
+    --color-border: #cccccc;
+    /* Borders, dividers - classic gray */
+    --color-border-light: #dddddd;
+    /* Lighter borders */
+    --color-input: #ffffff;
+    /* Input fields */
+    --color-input-focus: #ffffcc;
+    /* Focused inputs - slight yellow tint */
+    --color-badge: #6666ff;
+    /* Badges, tags - web purple */
+    --color-badge-private: #ff6699;
+    /* Private torrents - hot pink */
+    --color-cached: #00cccc;
+    /* Cached downloads - cyan */
+    --color-progress: #00aa00;
+    /* Progress bars */
+    --color-graph: #ff6600;
+    /* Charts/graphs */
+  }
+
+  /* ===== GLOBAL OVERRIDES FOR RETRO LOOK ===== */
+  * {
+    border-radius: 0 !important;
+    font-family: "Trebuchet MS", "Arial", sans-serif !important;
+  }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* ===== ROOT STYLING ===== */
+  #root {
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+  }
+
+  /* ===== ICONS ===== */
+  .fill-white,
+  .text-white {
+    fill: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+  }
+  /* ===== NAVBAR ===== */
+  h2.font-\[\'TorBox_Dotted\'\] {
+ font-size: 0;
+  }
+ h1.font-\[\'TorBox_Dotted\'\] {
+ font-size: 0;
+
+}
+h2.font-\[\'TorBox_Dotted\'\]::before {
+ content: 'My downloads';
+font-size: 2rem;
+
+}
+h1.font-\[\'TorBox_Dotted\'\]::before {
+ content: 'RealDebrid';
+font-size: 2rem;
+
+}
+img.w-16.h-16 {
+  display: block;
+  width: 64px;
+  height: 64px;
+  content: none;
+  background: url("https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/real-debrid.svg") no-repeat center / cover;
+}
+
+/* ===== POP-UPS ===== */
+[id^="headlessui-menu-items"] {
+  background-color: var(--color-bg-alt);
+  border: 2px solid var(--color-border) !important;
+  box-shadow: 2px 2px 5px #999999 !important;
+}
+[id^="headlessui-popover-panel"] {
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border) !important;
+  box-shadow: 3px 3px 8px #999999 !important;
+}
+[id^="headlessui-popover-panel"] div button {
+  border-color: var(--color-accent-dark);
+  border-width: 2px !important;
+}
+
+/* ===== LAYOUT CONTAINERS ===== */
+.sidebar,
+.downloads {
+  background-color: var(--color-bg-alt) !important;
+  border: 1px solid var(--color-border) !important;
+}
+.downloads .sticky {
+  background-color: var(--color-bg-alt) !important;
+  border-bottom: 2px solid var(--color-border) !important;
+}
+
+/* ===== DOWNLOAD STATISTICS HEADER ===== */
+.downloads .sticky .flex > div:last-child span {
+  display: none;
+}
+.downloads .sticky .flex > div:first-child span {
+  display: none;
+}
+.downloads .sticky .flex > div:nth-child(2) span {
+  display: none;
+}
+
+/* ===== DOWNLOAD ITEM CARDS ===== */
+[id^="headlessui-popover-button"] {
+  background-color: var(--color-surface) !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: none !important;
+  display: block !important;
+  padding: 2px 4px !important;
+  margin: 1px 0 !important;
+}
+[id^="headlessui-popover-button"]:hover {
+  background-color: #e6f3ff !important;
+}
+[id^="headlessui-popover-button"] > div {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 4px !important;
+}
+[id^="headlessui-popover-button"] > div.flex > div.flex {
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+[id^="headlessui-popover-button"] div.pl-4 {
+  display: none;
+}
+[id^="headlessui-popover-button"] div.flex-col {
+  flex-direction: row;
+}
+[id^="headlessui-popover-button"] p.text-lg {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  margin: 0 !important;
+  padding: 2px 4px !important;
+  flex: 1 !important;
+}
+
+/* ===== STATUS BADGES (HIDDEN) ===== */
+.flex.flex-wrap.gap-3.items-center p.bg-gray-500 {
+  display: none;
+}
+.flex.flex-wrap.gap-3.items-center p.bg-indigo-500 {
+  display: none;
+}
+.flex.flex-wrap.gap-3.items-center p.bg-\[\#04BF8A\] {
+  display: none;
+}
+.flex.flex-wrap.gap-3.items-center p.bg-blue-500 {
+  display: none;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.downloads button.rounded-md.font-bold {
+  background: #f0f0f0 !important;
+  color: var(--color-text) !important;
+  border: 1px solid #999999 !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  padding: 2px 6px !important;
+}
+.downloads button.rounded-md.font-bold:hover {
+  background: #e0e0e0 !important;
+  text-decoration: underline !important;
+}
+
+/* ===== PLAN EXPIRATION BUTTONS ===== */
+a.rounded-md.p-2.w-full.bg-red-500 {
+  background: linear-gradient(to bottom,
+  #ff4444,
+  #cc0000) !important;
+  border: 2px outset #ff0000 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+a.rounded-md.p-2.w-full.bg-red-500:hover {
+  background: linear-gradient(to bottom,
+  #ff6666,
+  #dd1111) !important;
+}
+a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
+  background: linear-gradient(to bottom,
+  #ffbb33,
+  #ff9900) !important;
+  border: 2px outset #ffaa00 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+a.rounded-md.p-2.w-full.bg-\[\#F59E0B\]:hover {
+  background: linear-gradient(to bottom,
+  #ffcc55,
+  #ffaa11) !important;
+}
+
+/* ===== FORMS & INPUT ELEMENTS ===== */
+form,
+textarea,
+input {
+  background-color: var(--color-bg) !important;
+}
+form div {
+  background-color: var(--color-bg) !important;
+}
+form button.relative.block.w-full {
+  background-color: var(--color-bg);
+}
+input:focus,
+button:focus {
+  outline: 2px dotted var(--color-accent) !important;
+  outline-offset: 2px !important;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--color-bg-alt) !important;
+  border-top: 2px solid var(--color-border) !important;
+}
+
+/* ===== LAYOUT MODIFICATIONS ===== */
+main {
+  grid-template-columns: none !important;
+}
+div.relative.sidebar {
+  display: none;
+}
+
+/* ===== RETRO TYPOGRAPHY EFFECTS ===== */
+h1,
+h2,
+h3 {
+  text-shadow: 2px 2px 0px #cccccc !important;
+  font-weight: bold !important;
+}
+
+
+}
