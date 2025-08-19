@@ -113,6 +113,20 @@ Blur download titles after 2 seconds of hovering:
 }
 ```
 
+### Blur Titles Indefinitely
+
+Always blur download titles:
+
+```css
+/* Indefinitely blur download titles */
+[id^="headlessui-popover-button"] p.text-lg {
+  filter: blur(4px);
+  transition-delay: 1s;
+}
+```
+
+**Best as a user style for easy togglability:** [![Install Blur Titles](https://img.shields.io/badge/Install-Blur%20Titles-gray)](https://github.com/worldInColors/torbox-styles/raw/main/styles/other/blur-titles.user.css)
+
 ### Hide the sidebar
 
 ```css

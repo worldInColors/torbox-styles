@@ -1,0 +1,13 @@
+/* ==UserStyle==
+@name           Torbox Discord Blur titles
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A sleek theme inspired by Discord's Onyx dark theme
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://torbox.app") {
+[id^="headlessui-popover-button"] p.text-lg {
+  filter: blur(4px);
+  transition-delay: 1s;
+}
+}
