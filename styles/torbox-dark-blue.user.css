@@ -177,7 +177,7 @@
 
   /* ===== FOOTER===== */
   footer {
-    background-color: var(--color-bg);
+    background-color: var(--color-bg) !important;
   }
 
   /* ===== OPTIONAL EFFECTS ===== */
