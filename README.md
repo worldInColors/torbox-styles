@@ -4,13 +4,20 @@ A collection of beautiful themes for TorBox dashboard, offering multiple color s
 
 ## Available Themes
 
-| Theme                 | Description                                            | Preview                              | Install                                                                                                                                                     |
-| --------------------- | ------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Dark Blue**         | Dark theme with blue accents                           | ![Preview](previews/dark-blue.png)   | [![Install](https://img.shields.io/badge/Install-Stylus-blue)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-dark-blue.user.css)    |
-| **Catppuccin**        | Soft pastel theme inspired by Catppuccin color palette | ![Preview](previews/catppuccin.png)  | [![Install](https://img.shields.io/badge/Install-Stylus-purple)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-catppuccin.user.css) |
-| **Amber**             | Warm amber theme with golden accents                   | ![Preview](previews/amber.png)       | [![Install](https://img.shields.io/badge/Install-Stylus-orange)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-amber.user.css)      |
-| **Light**             | Clean light theme for daytime usage                    | ![Preview](previews/light.png)       | [![Install](https://img.shields.io/badge/Install-Stylus-lightblue)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-light.user.css)   |
-| **Torbox But Better** | My personal favourite: RealDebrid                      | ![Preview](previews/real-debrid.png) | [![Install](https://img.shields.io/badge/Install-Stylus-green)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-but-better.user.css)  |
+| Theme                 | Description                                                   | Preview                                  | Install                                                                                                                                                          |
+| --------------------- | ------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Dark Blue**         | Dark theme with blue accents                                  | ![Preview](previews/dark-blue.png)       | [![Install](https://img.shields.io/badge/Install-Stylus-blue)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-dark-blue.user.css)         |
+| **Catppuccin**        | Soft pastel theme inspired by Catppuccin color palette        | ![Preview](previews/catppuccin.png)      | [![Install](https://img.shields.io/badge/Install-Stylus-purple)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-catppuccin.user.css)      |
+| **Amber**             | Warm amber theme with golden accents                          | ![Preview](previews/amber.png)           | [![Install](https://img.shields.io/badge/Install-Stylus-orange)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-amber.user.css)           |
+| **Light**             | Clean light theme for daytime usage                           | ![Preview](previews/light.png)           | [![Install](https://img.shields.io/badge/Install-Stylus-lightblue)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-light.user.css)        |
+| **Deep Sea**          | A sophisticated dark theme with professional blues            | ![Preview](previews/deep-sea.png)        | [![Install](https://img.shields.io/badge/Install-Stylus-darkblue)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-deap-sea.user.css)      |
+| **Fire Sunset**       | A bold fiery theme with deep reds and warm sunset colors      | ![Preview](previews/fire-sunset.png)     | [![Install](https://img.shields.io/badge/Install-Stylus-red)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-fire-sunset.user.css)        |
+| **Forest Green**      | A natural forest-inspired theme with earth tones              | ![Preview](previews/forest-green.png)    | [![Install](https://img.shields.io/badge/Install-Stylus-green)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-forest-green.user.css)     |
+| **Ocean Breeze**      | A crisp ocean-inspired theme with deep blues and cyan accents | ![Preview](previews/ocean-breeze.png)    | [![Install](https://img.shields.io/badge/Install-Stylus-cyan)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-ocean-breeze.user.css)      |
+| **Onyx**              | A sleek theme inspired by Discord's Onyx dark theme           | ![Preview](previews/onyx.png)            | [![Install](https://img.shields.io/badge/Install-Stylus-black)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-onyx.user.css)             |
+| **Pastel Dreams**     | A dreamy pastel theme with soft colors                        | ![Preview](previews/pastel-dream.png)    | [![Install](https://img.shields.io/badge/Install-Stylus-pink)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-pastel-dream.user.css)      |
+| **Vivid Purple**      | A luxurious purple gradient theme with royal vibes            | ![Preview](previews/vivid-nightfall.png) | [![Install](https://img.shields.io/badge/Install-Stylus-purple)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-vivid-nightfall.user.css) |
+| **Torbox But Better** | My personal favourite: RealDebrid                             | ![Preview](previews/real-debrid.png)     | [![Install](https://img.shields.io/badge/Install-Stylus-green)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-but-better.user.css)       |
 
 <br />
 
@@ -74,9 +81,15 @@ Each theme has its unique color scheme:
 - **Catppuccin**: Soft pastels from the Catppuccin palette
 - **Amber**: Warm golds and oranges
 - **Light**: Clean whites and light blues
+- **Deep Sea**: Professional blues and deep ocean tones
+- **Fire Sunset**: Bold reds, oranges, and warm sunset hues
+- **Forest Green**: Natural greens and earth tones
+- **Ocean Breeze**: Deep blues and refreshing cyan accents
+- **Onyx**: Sleek blacks and grays inspired by Discord
+- **Pastel Dreams**: Soft, dreamy pastel colors
+- **Vivid Purple**: Luxurious purples and royal gradients
 - **Torbox But Better**: RealDebrid
-
-<br />
+  <br />
 
 ## Optional Features
 
