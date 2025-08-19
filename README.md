@@ -46,164 +46,6 @@ All themes include:
 
 <br />
 
-## Theme Examples
-
-Here's a preview of the Dark Blue theme (the original):
-
-### Dark Blue Theme CSS
-
-```css
-/* ==UserStyle==
-@name           Torbox Dark Blue Theme
-@namespace      github.com/openstyles/stylus
-@version        1.0.0
-@description    Dark theme for TorBox dashboard inspired by monkeytype
-@author         Me
-==/UserStyle== */
-
-@-moz-document url-prefix("https://torbox.app")
-{
-  /* ===== VARIABLES ===== */
-  * {
-    /* Backgrounds */
-    --color-bg: #22313f; /* main background */
-    --color-bg-alt: #34495e; /* secondary background */
-    --color-surface: #2c2e31; /* panels, cards, etc. */
-
-    /* Text */
-    --color-text: #d1d0c5; /* main text */
-    --color-text-sub: #e4f1fe; /* lighter text, subtitles */
-    --color-text-muted: #95a5a6; /* muted/secondary text */
-
-    /* Accent & Interactive */
-    --color-accent: #8dc6ff; /* caret, highlights */
-    --color-accent-hover: #a8d3ff; /* hover states */
-    --color-accent-dark: #5dade2; /* darker accent variant */
-
-    /* Status Colors */
-    --color-success: #27ae60; /* green for active/ready states */
-    --color-success-bg: #1e8449; /* darker green for backgrounds */
-    --color-warning: #f39c12; /* orange/yellow for warnings */
-    --color-warning-bg: #d68910; /* darker orange */
-    --color-error: #ca4754; /* red for errors */
-    --color-error-dark: #7e2a33; /* darker red */
-
-    /* UI Elements */
-    --color-border: #40566d; /* borders, dividers */
-    --color-border-light: #52708a; /* lighter borders */
-    --color-input: #2c3e50; /* input fields */
-    --color-input-focus: #34495e; /* focused inputs */
-
-    /* Special Elements */
-    --color-badge: #3498db; /* badges, tags */
-    --color-badge-private: #9b59b6; /* private torrents */
-    --color-cached: #17a2b8; /* cached downloads */
-    --color-progress: #2ecc71; /* progress bars */
-    --color-graph: #16a085; /* charts/graphs */
-  }
-
-  /* ===== ROOT STYLING ===== */
-  #root {
-    background: var(--color-bg) !important;
-    color: var(--color-text) !important;
-  }
-
-  /* ===== ICONS ===== */
-  .fill-white,
-  .text-white {
-    fill: var(--color-accent) !important;
-    color: var(--color-accent) !important;
-  }
-
-  /* ===== LAYOUT CONTAINERS ===== */
-  .sidebar,
-  .downloads {
-    background-color: var(--color-bg-alt) !important;
-  }
-
-  .downloads .sticky {
-    background-color: var(--color-bg-alt) !important;
-    border-bottom: 1px solid var(--color-border) !important;
-  }
-
-  /* ===== HEADER STATISTICS ===== */
-  .downloads .sticky .flex > div:last-child span {
-    color: var(--color-error-dark) !important; /* inactive downloads */
-  }
-
-  .downloads .sticky .flex > div:first-child span {
-    color: var(--color-success) !important; /* active downloads */
-  }
-
-  .downloads .sticky .flex > div:nth-child(2) span {
-    color: var(--color-accent) !important; /* total downloads */
-  }
-
-  /* ===== DOWNLOAD CARDS ===== */
-  [id^="headlessui-popover-button"] {
-    background-color: var(--color-surface) !important;
-    border: 1px solid var(--color-border) !important;
-  }
-
-  /* ===== STATUS BADGES ===== */
-  .flex.flex-wrap.gap-3.items-center p.bg-gray-500 {
-    background-color: var(--color-badge) !important; /* torrent */
-  }
-
-  .flex.flex-wrap.gap-3.items-center p.bg-indigo-500 {
-    background-color: var(--color-badge-private) !important; /* private */
-  }
-
-  .flex.flex-wrap.gap-3.items-center p.bg-\[\#04BF8A\] {
-    background-color: var(--color-success) !important; /* download ready */
-  }
-
-  .flex.flex-wrap.gap-3.items-center p.bg-blue-500 {
-    background-color: var(--color-cached) !important; /* cached */
-  }
-
-  /* ===== ACTION BUTTONS ===== */
-  button.rounded-md.font-bold {
-    background: none !important;
-    background-color: var(--color-success-bg) !important;
-  }
-
-  button.rounded-md.font-bold:hover {
-    background-color: var(--color-success) !important;
-  }
-
-  /* ===== PLAN EXPIRATION ===== */
-  /* Get More Time button */
-  a.rounded-md.p-2.w-full.bg-red-500 {
-    background-color: var(--color-error) !important;
-  }
-
-  a.rounded-md.p-2.w-full.bg-red-500:hover {
-    background-color: var(--color-error-dark) !important;
-  }
-
-  /* Hide yellow button */
-  .bg-\[\#F59E0B\] {
-    display: none !important;
-  }
-
-  /* ===== OPTIONAL EFFECTS ===== */
-  /* Blur effect on download titles */
-  [id^="headlessui-popover-button"] p.text-lg {
-    filter: blur(0);
-    transition: filter 0.3s;
-    transition-delay: 2s;
-  }
-
-  [id^="headlessui-popover-button"]:hover p.text-lg {
-    filter: blur(4px);
-    transition-delay: 1s;
-  }
-}
-```
-
-<br />
-
 ## Creating Custom Themes
 
 Want to create your own theme or modify an existing one? Each theme uses CSS variables for easy customization:
@@ -238,53 +80,53 @@ Each theme has its unique color scheme:
 
 ## Optional Features
 
+> **💡 How to add optional features:** Copy any of the CSS code blocks below and paste them at the end of your chosen theme file in Stylus.
+
 ### Blur Effect on Hover
 
-Blur titles after 2 seconds of hovering:
-
-Uncomment these lines
+Blur download titles after 2 seconds of hovering:
 
 ```css
 /* Blur effect on download titles */
-/* [id^="headlessui-popover-button"] p.text-lg {
-    filter: blur(0);
-    transition: filter 0.3s;
-    transition-delay: 2s;
-  }
+[id^="headlessui-popover-button"] p.text-lg {
+  filter: blur(0);
+  transition: filter 0.3s;
+  transition-delay: 2s;
+}
 
-  [id^="headlessui-popover-button"]:hover p.text-lg {
-    filter: blur(4px);
-    transition-delay: 1s;
-  } */
+[id^="headlessui-popover-button"]:hover p.text-lg {
+  filter: blur(4px);
+  transition-delay: 1s;
+}
 ```
 
 ### Hide the sidebar
 
-Uncomment these lines
-
 ```css
 /* Hide sidebar */
+main {
+  grid-template-columns: none !important;
+}
 
-/* main {
-    grid-template-columns: none !important;
-  }
-
-  div.relative.sidebar {
-    display: none;
-  } */
+div.relative.sidebar {
+  display: none;
+}
 ```
 
 ### Hide Specific UI Elements
 
 Hide or show UI elements, like the "Explore Addons" or "Get Extra Time" buttons:
 
-Uncomment these lines
-
 ```css
-/* hide addons button */
-/* a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
-        display: none !important;
-    } */
+/* Hide addons button */
+a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
+  display: none !important;
+}
+
+/* Hide Get more time button */
+a.rounded-md.p-2.w-full.bg-red-500 {
+  display: none !important;
+}
 ```
 
 <br />

@@ -1,13 +1,12 @@
 /* ==UserStyle==
-@name           torbox.app/dashboard - White Theme
+@name           Torbox Light Theme
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
 @description    Clean white theme with dark text
 @author         Me
 ==/UserStyle== */
-
 @-moz-document url-prefix("https://torbox.app") {
-  @import url("optional/blur-effect.css")
+
 
   /* ===== VARIABLES ===== */
 * {
@@ -197,43 +196,9 @@
     background-color: var(--color-warning);
   }
 
-  /* Hide addons button */
-    /* a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
-        display: none !important;
-    } 
-    */
-
-    /* Hide Get more time button */
-    /* a.rounded-md.p-2.w-full.bg-red-500 {
-        display: none !important;
-    } */
-
   /* ===== FOOTER===== */
   footer {
     background-color: var(--color-bg) !important;
     border-top: 1px solid var(--color-border);
   }
-
-  /* ===== OPTIONAL EFFECTS ===== */
-  /* Blur effect on download titles */
-  /* [id^="headlessui-popover-button"] p.text-lg {
-    filter: blur(0);
-    transition: filter 0.3s;
-    transition-delay: 2s;
-  }
-
-  [id^="headlessui-popover-button"]:hover p.text-lg {
-    filter: blur(4px);
-    transition-delay: 1s;
-  } */
-
-  /* Hide sidebar */
-
-  /* main {
-    grid-template-columns: none !important;
-  }
-
-  div.relative.sidebar {
-    display: none;
-  } */
 }

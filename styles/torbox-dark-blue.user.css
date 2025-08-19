@@ -179,26 +179,4 @@
   footer {
     background-color: var(--color-bg) !important;
   }
-
-  /* ===== OPTIONAL EFFECTS ===== */
-  
-  /* Blur effect on download titles */
-  [id^="headlessui-popover-button"] p.text-lg {
-    filter: blur(0);
-    transition: filter 0.3s;
-    transition-delay: 2s;
-  }
-
-  [id^="headlessui-popover-button"]:hover p.text-lg {
-    filter: blur(4px);
-    transition-delay: 1s;
-  }
-  /* Hide sidebar */
-  main {
-    grid-template-columns: none !important;
-  }
-
-  div.relative.sidebar {
-    display: none;
-  }
 }
