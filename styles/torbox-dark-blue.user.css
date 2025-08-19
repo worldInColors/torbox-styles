@@ -1,5 +1,5 @@
 /* ==UserStyle==
-@name           torbox dark blue
+@name           torbox.app/dashboard
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
 @description    A new userstyle
@@ -58,6 +58,12 @@
     fill: var(--color-accent) !important;
     color: var(--color-accent) !important;
   }
+    
+   /* ===== POP-UPS ===== */
+    [id^="headlessui-menu-items"] {
+        background-color: var(--color-bg-alt)
+    }
+    
 
   /* ===== LAYOUT CONTAINERS ===== */
   .sidebar, .downloads {
