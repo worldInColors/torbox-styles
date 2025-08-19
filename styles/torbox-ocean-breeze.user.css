@@ -1,0 +1,214 @@
+/* ==UserStyle==
+@name           Torbox Ocean Breeze Theme
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A crisp ocean-inspired theme with deep blues and cyan accents
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://torbox.app") {
+
+  /* ===== VARIABLES ===== */
+  * {
+    /* Color Palette */
+    --federal-blue: #03045e;
+    --honolulu-blue: #0077b6;
+    --pacific-cyan: #00b4d8;
+    --non-photo-blue: #90e0ef;
+    --light-cyan: #caf0f8;
+    
+    /* Backgrounds */
+    --color-bg: var(--federal-blue);
+    /* main background */
+    --color-bg-alt: #041e42;
+    /* secondary background */
+    --color-surface: #0a2b5c;
+    /* panels, cards, etc. */
+    
+    /* Text */
+    --color-text: var(--light-cyan);
+    /* main text */
+    --color-text-sub: #ffffff;
+    /* lighter text, subtitles */
+    --color-text-muted: var(--non-photo-blue);
+    /* muted/secondary text */
+    
+    /* Accent & Interactive */
+    --color-accent: var(--pacific-cyan);
+    /* caret, highlights */
+    --color-accent-hover: #1ac4e8;
+    /* hover states */
+    --color-accent-dark: var(--honolulu-blue);
+    /* darker accent variant */
+    
+    /* Status Colors */
+    --color-success: #2dd4bf;
+    /* green for active/ready states */
+    --color-success-bg: var(--honolulu-blue);
+    /* darker green for backgrounds */
+    --color-warning: #fbbf24;
+    /* orange/yellow for warnings */
+    --color-warning-bg: #f59e0b;
+    /* darker orange */
+    --color-error: #f87171;
+    /* red for errors */
+    --color-error-dark: #ef4444;
+    /* darker red */
+    
+    /* UI Elements */
+    --color-border: #1e40af;
+    /* borders, dividers */
+    --color-border-light: #3b82f6;
+    /* lighter borders */
+    --color-input: #1e3a8a;
+    /* input fields */
+    --color-input-focus: #2563eb;
+    /* focused inputs */
+    
+    /* Special Elements */
+    --color-badge: var(--honolulu-blue);
+    /* badges, tags */
+    --color-badge-private: #8b5cf6;
+    /* private torrents */
+    --color-cached: var(--pacific-cyan);
+    /* cached downloads */
+    --color-progress: var(--non-photo-blue);
+    /* progress bars */
+    --color-graph: #38bdf8;
+    /* charts/graphs */
+  }
+
+  /* ===== ROOT STYLING ===== */
+  #root {
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+  }
+
+  /* ===== ICONS ===== */
+  .fill-white,
+  .text-white {
+    fill: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+  }
+
+  /* ===== POP-UPS ===== */
+  [id^="headlessui-menu-items"] {
+    background-color: var(--color-bg-alt) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+
+  [id^="headlessui-popover-panel"] {
+    background-color: var(--color-bg) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button {
+    border-color: var(--color-accent-dark) !important;
+    background-color: var(--color-surface) !important;
+    color: var(--color-text) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button:hover {
+    background-color: var(--color-accent-dark) !important;
+    color: var(--light-cyan) !important;
+  }
+
+  /* ===== LAYOUT CONTAINERS ===== */
+  .sidebar,
+  .downloads {
+    background-color: var(--color-bg-alt) !important;
+  }
+
+  .downloads .sticky {
+    background-color: var(--color-bg-alt) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+  }
+
+  /* ===== HEADER STATISTICS ===== */
+  .downloads .sticky .flex > div:last-child span {
+    color: var(--color-error-dark) !important;
+    /* inactive downloads */
+  }
+
+  .downloads .sticky .flex > div:first-child span {
+    color: var(--color-success) !important;
+    /* active downloads */
+  }
+
+  .downloads .sticky .flex > div:nth-child(2) span {
+    color: var(--color-accent) !important;
+    /* total downloads */
+  }
+
+  /* ===== DOWNLOAD CARDS ===== */
+  [id^="headlessui-popover-button"] {
+    background-color: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+  }
+
+  [id^="headlessui-popover-button"]:hover {
+    background-color: var(--color-bg-alt) !important;
+    border-color: var(--color-border-light) !important;
+  }
+
+  /* ===== STATUS BADGES ===== */
+  .flex.flex-wrap.gap-3.items-center p.bg-gray-500 {
+    background-color: var(--color-badge) !important;
+    /* torrent */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-indigo-500 {
+    background-color: var(--color-badge-private) !important;
+    /* private */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-\[\#04BF8A\] {
+    background-color: var(--color-success) !important;
+    /* download ready */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-blue-500 {
+    background-color: var(--color-cached) !important;
+    /* cached */
+  }
+
+  /* ===== ADD BUTTONS ===== */
+  .downloads button.rounded-md.font-bold {
+    background: none !important;
+    background-color: var(--color-success-bg) !important;
+    color: var(--light-cyan) !important;
+    border: 1px solid var(--honolulu-blue) !important;
+  }
+
+  .downloads button.rounded-md.font-bold:hover {
+    background-color: var(--color-success) !important;
+    border-color: var(--color-success) !important;
+  }
+
+  /* ===== PLAN EXPIRATION ===== */
+  /* Get More Time button */
+  a.rounded-md.p-2.w-full.bg-red-500 {
+    background-color: var(--color-error) !important;
+    color: white !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-red-500:hover {
+    background-color: var(--color-error-dark) !important;
+  }
+
+  /* Explore addons button */
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
+    background-color: var(--color-warning-bg) !important;
+    color: white !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\]:hover {
+    background-color: var(--color-warning) !important;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: var(--color-bg) !important;
+    border-top: 1px solid var(--color-border) !important;
+  }
+}

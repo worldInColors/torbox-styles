@@ -191,9 +191,7 @@ Found an unthemed element, want to suggest improvements, or create a new theme? 
 
 - Original Dark Blue theme inspired by [monkeytype.com](https://monkeytype.com)
 - Catppuccin theme uses colors from the [Catppuccin](https://github.com/catppuccin/catppuccin) project
-- Thanks to all contributors and theme creators
-
-<br />
+  <br />
 
 ---
 

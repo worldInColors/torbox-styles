@@ -1,0 +1,214 @@
+/* ==UserStyle==
+@name           Torbox Pastel Dreams Theme
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A dreamy pastel theme with soft colors
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://torbox.app") {
+
+  /* ===== VARIABLES ===== */
+  * {
+    /* Color Palette */
+    --thistle: #cdb4db;
+    --fairy-tale: #ffc8dd;
+    --carnation-pink: #ffafcc;
+    --uranian-blue: #bde0fe;
+    --light-sky-blue: #a2d2ff;
+    
+    /* Backgrounds */
+    --color-bg: #f8f0ff;
+    /* main background */
+    --color-bg-alt: #f0e6f7;
+    /* secondary background */
+    --color-surface: #faf5ff;
+    /* panels, cards, etc. */
+    
+    /* Text */
+    --color-text: #4a3c5a;
+    /* main text */
+    --color-text-sub: #2d1b3d;
+    /* lighter text, subtitles */
+    --color-text-muted: #6b5b73;
+    /* muted/secondary text */
+    
+    /* Accent & Interactive */
+    --color-accent: var(--thistle);
+    /* caret, highlights */
+    --color-accent-hover: #d8c1e3;
+    /* hover states */
+    --color-accent-dark: #b89fd1;
+    /* darker accent variant */
+    
+    /* Status Colors */
+    --color-success: var(--uranian-blue);
+    /* green for active/ready states */
+    --color-success-bg: #a8d5fc;
+    /* darker green for backgrounds */
+    --color-warning: var(--fairy-tale);
+    /* orange/yellow for warnings */
+    --color-warning-bg: #ffb3d1;
+    /* darker orange */
+    --color-error: var(--carnation-pink);
+    /* red for errors */
+    --color-error-dark: #ff94bf;
+    /* darker red */
+    
+    /* UI Elements */
+    --color-border: #e1d0eb;
+    /* borders, dividers */
+    --color-border-light: #ead9f0;
+    /* lighter borders */
+    --color-input: #f5ebfc;
+    /* input fields */
+    --color-input-focus: #ede0f5;
+    /* focused inputs */
+    
+    /* Special Elements */
+    --color-badge: var(--light-sky-blue);
+    /* badges, tags */
+    --color-badge-private: var(--carnation-pink);
+    /* private torrents */
+    --color-cached: var(--uranian-blue);
+    /* cached downloads */
+    --color-progress: var(--thistle);
+    /* progress bars */
+    --color-graph: #c7aed6;
+    /* charts/graphs */
+  }
+
+  /* ===== ROOT STYLING ===== */
+  #root {
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+  }
+
+  /* ===== ICONS ===== */
+  .fill-white,
+  .text-white {
+    fill: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+  }
+
+  /* ===== POP-UPS ===== */
+  [id^="headlessui-menu-items"] {
+    background-color: var(--color-bg-alt) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+
+  [id^="headlessui-popover-panel"] {
+    background-color: var(--color-bg) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button {
+    border-color: var(--color-accent-dark) !important;
+    background-color: var(--color-surface) !important;
+    color: var(--color-text) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button:hover {
+    background-color: var(--color-accent-dark) !important;
+    color: white !important;
+  }
+
+  /* ===== LAYOUT CONTAINERS ===== */
+  .sidebar,
+  .downloads {
+    background-color: var(--color-bg-alt) !important;
+  }
+
+  .downloads .sticky {
+    background-color: var(--color-bg-alt) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+  }
+
+  /* ===== HEADER STATISTICS ===== */
+  .downloads .sticky .flex > div:last-child span {
+    color: var(--color-error-dark) !important;
+    /* inactive downloads */
+  }
+
+  .downloads .sticky .flex > div:first-child span {
+    color: var(--color-success) !important;
+    /* active downloads */
+  }
+
+  .downloads .sticky .flex > div:nth-child(2) span {
+    color: var(--color-accent) !important;
+    /* total downloads */
+  }
+
+  /* ===== DOWNLOAD CARDS ===== */
+  [id^="headlessui-popover-button"] {
+    background-color: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+  }
+
+  [id^="headlessui-popover-button"]:hover {
+    background-color: var(--color-bg-alt) !important;
+    border-color: var(--color-border-light) !important;
+  }
+
+  /* ===== STATUS BADGES ===== */
+  .flex.flex-wrap.gap-3.items-center p.bg-gray-500 {
+    background-color: var(--color-badge) !important;
+    /* torrent */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-indigo-500 {
+    background-color: var(--color-badge-private) !important;
+    /* private */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-\[\#04BF8A\] {
+    background-color: var(--color-success) !important;
+    /* download ready */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-blue-500 {
+    background-color: var(--color-cached) !important;
+    /* cached */
+  }
+
+  /* ===== ADD BUTTONS ===== */
+  .downloads button.rounded-md.font-bold {
+    background: none !important;
+    background-color: var(--color-success-bg) !important;
+    color: var(--color-text) !important;
+    border: 1px solid var(--uranian-blue) !important;
+  }
+
+  .downloads button.rounded-md.font-bold:hover {
+    background-color: var(--color-success) !important;
+    border-color: var(--color-success) !important;
+  }
+
+  /* ===== PLAN EXPIRATION ===== */
+  /* Get More Time button */
+  a.rounded-md.p-2.w-full.bg-red-500 {
+    background-color: var(--color-error) !important;
+    color: var(--color-text) !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-red-500:hover {
+    background-color: var(--color-error-dark) !important;
+  }
+
+  /* Explore addons button */
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
+    background-color: var(--color-warning-bg) !important;
+    color: var(--color-text) !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\]:hover {
+    background-color: var(--color-warning) !important;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: var(--color-bg) !important;
+    border-top: 1px solid var(--color-border) !important;
+  }
+}

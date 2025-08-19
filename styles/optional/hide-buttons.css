@@ -1,9 +1,0 @@
-/* Hide addons button */
-a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
-  display: none !important;
-}
-
-/* Hide Get more time button */
-a.rounded-md.p-2.w-full.bg-red-500 {
-  display: none !important;
-}

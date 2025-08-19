@@ -1,7 +1,0 @@
-main {
-  grid-template-columns: none !important;
-}
-
-div.relative.sidebar {
-  display: none;
-}

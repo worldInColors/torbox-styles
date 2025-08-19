@@ -1,0 +1,215 @@
+/* ==UserStyle==
+@name           Torbox Onyx Theme
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A sleek theme inspired by Discord's Onyx dark theme
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://torbox.app") {
+
+  /* ===== VARIABLES ===== */
+  * {
+    /* Discord Onyx Color Palette */
+    --onyx-black: #0c0c0c;
+    --onyx-darker: #1a1a1a;
+    --onyx-dark: #232428;
+    --onyx-medium: #313338;
+    --onyx-light: #383a40;
+    --onyx-lighter: #404249;
+    
+    /* Backgrounds */
+    --color-bg: var(--onyx-black);
+    /* main background */
+    --color-bg-alt: var(--onyx-darker);
+    /* secondary background */
+    --color-surface: var(--onyx-dark);
+    /* panels, cards, etc. */
+    
+    /* Text */
+    --color-text: #f2f3f5;
+    /* main text */
+    --color-text-sub: #ffffff;
+    /* lighter text, subtitles */
+    --color-text-muted: #b5bac1;
+    /* muted/secondary text */
+    
+    /* Accent & Interactive */
+    --color-accent: #b5bac1;
+    /* subtle grey accent */
+    --color-accent-hover: #d1d5db;
+    /* hover states */
+    --color-accent-dark: #9ca3af;
+    /* darker accent variant */
+    
+    /* Status Colors */
+    --color-success: #23a55a;
+    /* Discord green */
+    --color-success-bg: #1a7f37;
+    /* darker green for backgrounds */
+    --color-warning: #f0b232;
+    /* Discord yellow */
+    --color-warning-bg: #c7940a;
+    /* darker orange */
+    --color-error: #f23f43;
+    /* Discord red */
+    --color-error-dark: #da373c;
+    /* darker red */
+    
+    /* UI Elements */
+    --color-border: var(--onyx-medium);
+    /* borders, dividers */
+    --color-border-light: var(--onyx-light);
+    /* lighter borders */
+    --color-input: var(--onyx-medium);
+    /* input fields */
+    --color-input-focus: var(--onyx-light);
+    /* focused inputs */
+    
+    /* Special Elements */
+    --color-badge: #6b7280;
+    /* badges, tags */
+    --color-badge-private: #8b5cf6;
+    /* private torrents */
+    --color-cached: #6b7280;
+    /* cached downloads */
+    --color-progress: #9ca3af;
+    /* progress bars */
+    --color-graph: #9ca3af;
+    /* charts/graphs */
+  }
+
+  /* ===== ROOT STYLING ===== */
+  #root {
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+  }
+
+  /* ===== ICONS ===== */
+  .fill-white,
+  .text-white {
+    fill: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+  }
+
+  /* ===== POP-UPS ===== */
+  [id^="headlessui-menu-items"] {
+    background-color: var(--color-bg-alt) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+
+  [id^="headlessui-popover-panel"] {
+    background-color: var(--color-bg) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button {
+    border-color: var(--color-accent-dark) !important;
+    background-color: var(--color-surface) !important;
+    color: var(--color-text) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button:hover {
+    background-color: var(--color-accent-dark) !important;
+    color: white !important;
+  }
+
+  /* ===== LAYOUT CONTAINERS ===== */
+  .sidebar,
+  .downloads {
+    background-color: var(--color-bg-alt) !important;
+  }
+
+  .downloads .sticky {
+    background-color: var(--color-bg-alt) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+  }
+
+  /* ===== HEADER STATISTICS ===== */
+  .downloads .sticky .flex > div:last-child span {
+    color: var(--color-error-dark) !important;
+    /* inactive downloads */
+  }
+
+  .downloads .sticky .flex > div:first-child span {
+    color: var(--color-success) !important;
+    /* active downloads */
+  }
+
+  .downloads .sticky .flex > div:nth-child(2) span {
+    color: var(--color-accent) !important;
+    /* total downloads */
+  }
+
+  /* ===== DOWNLOAD CARDS ===== */
+  [id^="headlessui-popover-button"] {
+    background-color: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+  }
+
+  [id^="headlessui-popover-button"]:hover {
+    background-color: var(--color-bg-alt) !important;
+    border-color: var(--color-border-light) !important;
+  }
+
+  /* ===== STATUS BADGES ===== */
+  .flex.flex-wrap.gap-3.items-center p.bg-gray-500 {
+    background-color: var(--color-badge) !important;
+    /* torrent */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-indigo-500 {
+    background-color: var(--color-badge-private) !important;
+    /* private */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-\[\#04BF8A\] {
+    background-color: var(--color-success) !important;
+    /* download ready */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-blue-500 {
+    background-color: var(--color-cached) !important;
+    /* cached */
+  }
+
+  /* ===== ADD BUTTONS ===== */
+  .downloads button.rounded-md.font-bold {
+    background: none !important;
+    background-color: var(--color-success-bg) !important;
+    color: white !important;
+    border: 1px solid var(--color-success) !important;
+  }
+
+  .downloads button.rounded-md.font-bold:hover {
+    background-color: var(--color-success) !important;
+    border-color: var(--color-success) !important;
+  }
+
+  /* ===== PLAN EXPIRATION ===== */
+  /* Get More Time button */
+  a.rounded-md.p-2.w-full.bg-red-500 {
+    background-color: var(--color-error) !important;
+    color: white !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-red-500:hover {
+    background-color: var(--color-error-dark) !important;
+  }
+
+  /* Explore addons button */
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
+    background-color: var(--color-warning-bg) !important;
+    color: white !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\]:hover {
+    background-color: var(--color-warning) !important;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: var(--color-bg) !important;
+    border-top: 1px solid var(--color-border) !important;
+  }
+}

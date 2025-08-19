@@ -1,0 +1,218 @@
+/* ==UserStyle==
+@name           Torbox Vivid Purple Theme
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A luxurious purple gradient theme with royal vibes
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://torbox.app") {
+
+  /* ===== VARIABLES ===== */
+  * {
+    /* Color Palette */
+    --russian-violet: #10002b;
+    --russian-violet-2: #240046;
+    --persian-indigo: #3c096c;
+    --tekhelet: #5a189a;
+    --french-violet: #7b2cbf;
+    --amethyst: #9d4edd;
+    --heliotrope: #c77dff;
+    --mauve: #e0aaff;
+    
+    /* Backgrounds */
+    --color-bg: var(--russian-violet);
+    /* main background */
+    --color-bg-alt: var(--russian-violet-2);
+    /* secondary background */
+    --color-surface: #2d0054;
+    /* panels, cards, etc. */
+    
+    /* Text */
+    --color-text: var(--mauve);
+    /* main text */
+    --color-text-sub: #ffffff;
+    /* lighter text, subtitles */
+    --color-text-muted: var(--heliotrope);
+    /* muted/secondary text */
+    
+    /* Accent & Interactive */
+    --color-accent: var(--amethyst);
+    /* caret, highlights */
+    --color-accent-hover: #b55eeb;
+    /* hover states */
+    --color-accent-dark: var(--french-violet);
+    /* darker accent variant */
+    
+    /* Status Colors */
+    --color-success: #22d3ee;
+    /* green for active/ready states */
+    --color-success-bg: var(--tekhelet);
+    /* darker green for backgrounds */
+    --color-warning: #fbbf24;
+    /* orange/yellow for warnings */
+    --color-warning-bg: #f59e0b;
+    /* darker orange */
+    --color-error: #f87171;
+    /* red for errors */
+    --color-error-dark: #ef4444;
+    /* darker red */
+    
+    /* UI Elements */
+    --color-border: var(--persian-indigo);
+    /* borders, dividers */
+    --color-border-light: #4c1a80;
+    /* lighter borders */
+    --color-input: var(--russian-violet-2);
+    /* input fields */
+    --color-input-focus: var(--persian-indigo);
+    /* focused inputs */
+    
+    /* Special Elements */
+    --color-badge: var(--french-violet);
+    /* badges, tags */
+    --color-badge-private: var(--tekhelet);
+    /* private torrents */
+    --color-cached: var(--amethyst);
+    /* cached downloads */
+    --color-progress: var(--heliotrope);
+    /* progress bars */
+    --color-graph: #b565d8;
+    /* charts/graphs */
+  }
+
+  /* ===== ROOT STYLING ===== */
+  #root {
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+  }
+
+  /* ===== ICONS ===== */
+  .fill-white,
+  .text-white {
+    fill: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+  }
+
+  /* ===== POP-UPS ===== */
+  [id^="headlessui-menu-items"] {
+    background-color: var(--color-bg-alt) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+
+  [id^="headlessui-popover-panel"] {
+    background-color: var(--color-bg) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button {
+    border-color: var(--color-accent-dark) !important;
+    background-color: var(--color-surface) !important;
+    color: var(--color-text) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button:hover {
+    background-color: var(--color-accent-dark) !important;
+    color: var(--mauve) !important;
+  }
+
+  /* ===== LAYOUT CONTAINERS ===== */
+  .sidebar,
+  .downloads {
+    background-color: var(--color-bg-alt) !important;
+  }
+
+  .downloads .sticky {
+    background-color: var(--color-bg-alt) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+  }
+
+  /* ===== HEADER STATISTICS ===== */
+  .downloads .sticky .flex > div:last-child span {
+    color: var(--color-error-dark) !important;
+    /* inactive downloads */
+  }
+
+  .downloads .sticky .flex > div:first-child span {
+    color: var(--color-success) !important;
+    /* active downloads */
+  }
+
+  .downloads .sticky .flex > div:nth-child(2) span {
+    color: var(--color-accent) !important;
+    /* total downloads */
+  }
+
+  /* ===== DOWNLOAD CARDS ===== */
+  [id^="headlessui-popover-button"] {
+    background-color: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+  }
+
+  [id^="headlessui-popover-button"]:hover {
+    background-color: var(--color-bg-alt) !important;
+    border-color: var(--color-border-light) !important;
+  }
+
+  /* ===== STATUS BADGES ===== */
+  .flex.flex-wrap.gap-3.items-center p.bg-gray-500 {
+    background-color: var(--color-badge) !important;
+    /* torrent */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-indigo-500 {
+    background-color: var(--color-badge-private) !important;
+    /* private */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-\[\#04BF8A\] {
+    background-color: var(--color-success) !important;
+    /* download ready */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-blue-500 {
+    background-color: var(--color-cached) !important;
+    /* cached */
+  }
+
+  /* ===== ADD BUTTONS ===== */
+  .downloads button.rounded-md.font-bold {
+    background: none !important;
+    background-color: var(--color-success-bg) !important;
+    color: var(--mauve) !important;
+    border: 1px solid var(--tekhelet) !important;
+  }
+
+  .downloads button.rounded-md.font-bold:hover {
+    background-color: var(--color-success) !important;
+    border-color: var(--color-success) !important;
+    color: white !important;
+  }
+
+  /* ===== PLAN EXPIRATION ===== */
+  /* Get More Time button */
+  a.rounded-md.p-2.w-full.bg-red-500 {
+    background-color: var(--color-error) !important;
+    color: white !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-red-500:hover {
+    background-color: var(--color-error-dark) !important;
+  }
+
+  /* Explore addons button */
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
+    background-color: var(--color-warning-bg) !important;
+    color: white !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\]:hover {
+    background-color: var(--color-warning) !important;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: var(--color-bg) !important;
+    border-top: 1px solid var(--color-border) !important;
+  }
+}
