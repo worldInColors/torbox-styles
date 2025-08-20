@@ -220,7 +220,16 @@ Found an unthemed element, want to suggest improvements, or create a new theme? 
 
 - Original Dark Blue theme inspired by [monkeytype.com](https://monkeytype.com)
 - Catppuccin theme uses colors from the [Catppuccin](https://github.com/catppuccin/catppuccin) project
-  <br />
+
+<br />
+
+## Like what I do?
+
+If you enjoy these themes and would like to support my work, consider buying me a coffee! ☕
+
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nourm)
+
+<br />
 
 ---
 
