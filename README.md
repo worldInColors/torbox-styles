@@ -14,6 +14,7 @@ A collection of beautiful themes for TorBox dashboard, offering multiple color s
 | **Fire Sunset**       | A bold fiery theme with deep reds and warm sunset colors      | ![Preview](previews/fire-sunset.png)     | [![Install](https://img.shields.io/badge/Install-Stylus-red)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-fire-sunset.user.css)        |
 | **Forest Green**      | A natural forest-inspired theme with earth tones              | ![Preview](previews/forest-green.png)    | [![Install](https://img.shields.io/badge/Install-Stylus-green)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-forest-green.user.css)     |
 | **Ocean Breeze**      | A crisp ocean-inspired theme with deep blues and cyan accents | ![Preview](previews/ocean-breeze.png)    | [![Install](https://img.shields.io/badge/Install-Stylus-cyan)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-ocean-breeze.user.css)      |
+| **Ocean Depths**      | A deep oceanic theme transitioning to mysterious purples      | ![Preview](previews/ocean-depths.png)    | [![Install](https://img.shields.io/badge/Install-Stylus-darkblue)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-ocean-depths.user.css)  |
 | **Onyx**              | A sleek theme inspired by Discord's Onyx dark theme           | ![Preview](previews/onyx.png)            | [![Install](https://img.shields.io/badge/Install-Stylus-black)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-onyx.user.css)             |
 | **Pastel Dreams**     | A dreamy pastel theme with soft colors                        | ![Preview](previews/pastel-dream.png)    | [![Install](https://img.shields.io/badge/Install-Stylus-pink)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-pastel-dream.user.css)      |
 | **Vivid Purple**      | A luxurious purple gradient theme with royal vibes            | ![Preview](previews/vivid-nightfall.png) | [![Install](https://img.shields.io/badge/Install-Stylus-purple)](https://github.com/worldInColors/torbox-styles/raw/main/styles/torbox-vivid-nightfall.user.css) |
@@ -85,6 +86,7 @@ Each theme has its unique color scheme:
 - **Fire Sunset**: Bold reds, oranges, and warm sunset hues
 - **Forest Green**: Natural greens and earth tones
 - **Ocean Breeze**: Deep blues and refreshing cyan accents
+- **Ocean Depths**: Deep oceanic colors transitioning to mysterious purples
 - **Onyx**: Sleek blacks and grays inspired by Discord
 - **Pastel Dreams**: Soft, dreamy pastel colors
 - **Vivid Purple**: Luxurious purples and royal gradients

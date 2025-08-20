@@ -1,0 +1,324 @@
+/* ==UserStyle==
+@name           Torbox Ocean Depths Theme
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A deep oceanic theme transitioning to mysterious purples
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://torbox.app") {
+
+  /* ===== VARIABLES ===== */
+  * {
+    /* Ocean to Purple Color Palette */
+    --caribbean-current: #006466;
+    --midnight-green: #065a60;
+    --midnight-green-2: #0b525b;
+    --midnight-green-3: #144552;
+    --charcoal: #1b3a4b;
+    --prussian-blue: #212f45;
+    --space-cadet: #272640;
+    --dark-purple: #312244;
+    --dark-purple-2: #3e1f47;
+    --palatinate: #4d194d;
+    
+    /* Lighter variants for accents */
+    --caribbean-light: #008b8d;
+    --teal-accent: #00a3a6;
+    --purple-accent: #6b46c1;
+    --purple-light: #8b5cf6;
+    
+    /* Backgrounds */
+    --color-bg: var(--space-cadet);
+    /* main background */
+    --color-bg-alt: var(--charcoal);
+    /* secondary background */
+    --color-surface: var(--midnight-green-3);
+    /* panels, cards, etc. */
+    
+    /* Text */
+    --color-text: #f1f5f9;
+    /* main text */
+    --color-text-sub: #e2e8f0;
+    /* lighter text, subtitles */
+    --color-text-muted: #94a3b8;
+    /* muted/secondary text */
+    
+    /* Accent & Interactive */
+    --color-accent: var(--teal-accent);
+    /* teal accent */
+    --color-accent-hover: var(--caribbean-light);
+    /* hover states */
+    --color-accent-dark: var(--caribbean-current);
+    /* darker accent variant */
+    
+    /* Status Colors */
+    --color-success: #10b981;
+    /* success green */
+    --color-success-bg: var(--midnight-green);
+    /* darker green for backgrounds */
+    --color-warning: #f59e0b;
+    /* warning yellow */
+    --color-warning-bg: #d97706;
+    /* darker yellow */
+    --color-error: #ef4444;
+    /* error red */
+    --color-error-dark: #dc2626;
+    /* darker red */
+    
+    /* UI Elements */
+    --color-border: var(--midnight-green-2);
+    /* borders, dividers */
+    --color-border-light: var(--caribbean-current);
+    /* lighter borders */
+    --color-input: var(--prussian-blue);
+    /* input fields */
+    --color-input-focus: var(--midnight-green-3);
+    /* focused inputs */
+    
+    /* Special Elements */
+    --color-badge: var(--midnight-green);
+    /* badges, tags */
+    --color-badge-private: var(--purple-accent);
+    /* private torrents */
+    --color-cached: var(--teal-accent);
+    /* cached downloads */
+    --color-progress: var(--caribbean-current);
+    /* progress bars */
+    --color-graph: var(--midnight-green);
+    /* charts/graphs */
+  }
+
+  /* ===== ROOT STYLING ===== */
+  #root {
+    background: linear-gradient(135deg, var(--space-cadet) 0%, var(--dark-purple) 50%, var(--palatinate) 100%) !important;
+    color: var(--color-text) !important;
+  }
+
+  /* ===== ICONS ===== */
+  .fill-white,
+  .text-white {
+    fill: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+  }
+
+  /* ===== POP-UPS ===== */
+  [id^="headlessui-menu-items"] {
+    background-color: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  [id^="headlessui-popover-panel"] {
+    background-color: var(--color-bg-alt) !important;
+    border: 1px solid var(--color-border) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button {
+    border-color: var(--color-border) !important;
+    background-color: var(--color-surface) !important;
+    color: var(--color-text) !important;
+  }
+
+  [id^="headlessui-popover-panel"] div button:hover {
+    background-color: var(--color-accent) !important;
+    color: var(--color-text-sub) !important;
+    box-shadow: 0 0 10px rgba(0, 163, 166, 0.3) !important;
+  }
+
+  /* ===== LAYOUT CONTAINERS ===== */
+  .sidebar,
+  .downloads {
+    background: linear-gradient(180deg, var(--charcoal) 0%, var(--midnight-green-3) 100%) !important;
+  }
+
+  .downloads .sticky {
+    background: linear-gradient(90deg, var(--charcoal) 0%, var(--midnight-green-3) 100%) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    backdrop-filter: blur(5px) !important;
+  }
+
+  /* ===== HEADER STATISTICS ===== */
+  .downloads .sticky .flex > div:last-child span {
+    color: var(--color-error) !important;
+    text-shadow: 0 0 5px rgba(239, 68, 68, 0.5) !important;
+    /* inactive downloads */
+  }
+
+  .downloads .sticky .flex > div:first-child span {
+    color: var(--color-success) !important;
+    text-shadow: 0 0 5px rgba(16, 185, 129, 0.5) !important;
+    /* active downloads */
+  }
+
+  .downloads .sticky .flex > div:nth-child(2) span {
+    color: var(--color-accent) !important;
+    text-shadow: 0 0 5px rgba(0, 163, 166, 0.5) !important;
+    /* total downloads */
+  }
+
+  /* ===== DOWNLOAD CARDS ===== */
+  [id^="headlessui-popover-button"] {
+    background: linear-gradient(135deg, var(--midnight-green-3) 0%, var(--prussian-blue) 100%) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+    box-shadow: 0 4px 15px rgba(0, 100, 102, 0.1) !important;
+  }
+
+  [id^="headlessui-popover-button"]:hover {
+    background: linear-gradient(135deg, var(--caribbean-current) 0%, var(--midnight-green) 100%) !important;
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 8px 25px rgba(0, 163, 166, 0.2) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  /* ===== STATUS BADGES ===== */
+  .flex.flex-wrap.gap-3.items-center p.bg-gray-500 {
+    background: linear-gradient(45deg, var(--midnight-green) 0%, var(--color-badge) 100%) !important;
+    color: var(--color-text) !important;
+    box-shadow: 0 2px 8px rgba(6, 90, 96, 0.3) !important;
+    /* torrent */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-indigo-500 {
+    background: linear-gradient(45deg, var(--dark-purple) 0%, var(--purple-accent) 100%) !important;
+    color: var(--color-text) !important;
+    box-shadow: 0 2px 8px rgba(107, 70, 193, 0.3) !important;
+    /* private */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-\[\#04BF8A\] {
+    background: linear-gradient(45deg, var(--color-success) 0%, var(--caribbean-light) 100%) !important;
+    color: var(--color-text) !important;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+    /* download ready */
+  }
+
+  .flex.flex-wrap.gap-3.items-center p.bg-blue-500 {
+    background: linear-gradient(45deg, var(--caribbean-current) 0%, var(--teal-accent) 100%) !important;
+    color: var(--color-text) !important;
+    box-shadow: 0 2px 8px rgba(0, 163, 166, 0.3) !important;
+    /* cached */
+  }
+
+  /* ===== ADD BUTTONS ===== */
+  .downloads button.rounded-md.font-bold {
+    background: linear-gradient(45deg, var(--color-success-bg) 0%, var(--color-success) 100%) !important;
+    color: var(--color-text) !important;
+    border: 1px solid var(--color-success) !important;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2) !important;
+  }
+
+  .downloads button.rounded-md.font-bold:hover {
+    background: linear-gradient(45deg, var(--color-success) 0%, var(--caribbean-light) 100%) !important;
+    border-color: var(--caribbean-light) !important;
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4) !important;
+    transform: translateY(-1px) !important;
+  }
+
+  /* ===== PLAN EXPIRATION ===== */
+  /* Get More Time button */
+  a.rounded-md.p-2.w-full.bg-red-500 {
+    background: linear-gradient(45deg, var(--color-error-dark) 0%, var(--color-error) 100%) !important;
+    color: var(--color-text) !important;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2) !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-red-500:hover {
+    background: linear-gradient(45deg, var(--color-error) 0%, #f87171) !important;
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4) !important;
+  }
+
+  /* Explore addons button */
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
+    background: linear-gradient(45deg, var(--color-warning-bg) 0%, var(--color-warning) 100%) !important;
+    color: var(--color-text) !important;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2) !important;
+  }
+
+  a.rounded-md.p-2.w-full.bg-\[\#F59E0B\]:hover {
+    background: linear-gradient(45deg, var(--color-warning) 0%, #fbbf24) !important;
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4) !important;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: linear-gradient(90deg, var(--dark-purple) 0%, var(--space-cadet) 100%) !important;
+    border-top: 1px solid var(--color-border) !important;
+  }
+
+  /* ===== FORM ===== */
+  form.bg-\[\#0f1117\] > div {
+    background: linear-gradient(135deg, var(--charcoal) 0%, var(--midnight-green-3) 100%) !important;
+  }
+  textarea, input {
+    background-color: var(--color-input) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+  }
+  textarea:focus, input:focus {
+    background-color: var(--color-input-focus) !important;
+    border-color: var(--color-accent) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(0, 163, 166, 0.3), 0 0 15px rgba(0, 163, 166, 0.1) !important;
+  }
+  button.relative.block.w-full {
+    background: linear-gradient(45deg, var(--color-success-bg) 0%, var(--midnight-green-3) 100%) !important;
+    color: var(--color-text) !important;
+    border: 1px solid var(--color-border) !important;
+  }
+  button.relative.block.w-full:hover {
+    background: linear-gradient(45deg, var(--color-success) 0%, var(--caribbean-current) 100%) !important;
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 4px 15px rgba(0, 163, 166, 0.2) !important;
+  }
+
+  /*  ===== CARD STYLING ===== */
+  .aspect-square.border.rounded-md.border-\[\#212A36\].text-center.bg-\[\#1E2129\] {
+    background: linear-gradient(135deg, var(--midnight-green-3) 0%, var(--prussian-blue) 100%) !important;
+    border-color: var(--color-border) !important; 
+    color: var(--color-text) !important;
+    box-shadow: 0 4px 15px rgba(0, 100, 102, 0.1) !important;
+  }
+
+  .aspect-square.border.rounded-md.border-\[\#212A36\].text-center.bg-\[\#1E2129\]:hover {
+    border-color: var(--color-accent) !important; 
+    background: linear-gradient(135deg, var(--caribbean-current) 0%, var(--midnight-green) 100%) !important;
+    box-shadow: 0 8px 25px rgba(0, 163, 166, 0.2) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  /* ===== SETTINGS PAGE ===== */
+  .w-full.h-full.border.p-4.rounded-md.border-\[\#212A36\].bg-\[\#1E2129\].max-w-7xl.mb-4 {
+    background: linear-gradient(135deg, var(--midnight-green-3) 0%, var(--charcoal) 100%) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text) !important;
+    box-shadow: 0 8px 30px rgba(0, 100, 102, 0.15) !important;
+  }
+
+  /* ===== FIXES ===== */
+  /* Fix API key not being blurred */
+  div.relative input.text-xs.px-3 {
+    color: transparent !important;
+  }
+
+  /* ===== ADDITIONAL OCEAN DEPTHS STYLING ===== */
+  body {
+    background: linear-gradient(135deg, var(--space-cadet) 0%, var(--dark-purple) 50%, var(--palatinate) 100%) !important;
+  }
+
+  /* Subtle animation for cards */
+  [id^="headlessui-popover-button"] {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  /* Glowing accent elements */
+  .downloads .sticky .flex > div span {
+    transition: text-shadow 0.3s ease !important;
+  }
+
+  /* Add depth with multiple shadows */
+  .downloads {
+    box-shadow: inset 0 1px 0 rgba(0, 163, 166, 0.1), 0 0 50px rgba(39, 38, 64, 0.5) !important;
+  }
+}
