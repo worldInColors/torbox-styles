@@ -80,15 +80,15 @@
 
   /* ===== POP-UPS ===== */
   [id^="headlessui-menu-items"] {
-    background-color: var(--color-bg-alt)
+    background-color: var(--color-bg-alt) !important;
   }
 
   [id^="headlessui-popover-panel"] {
-    background-color: var(--color-bg)
+    background-color: var(--color-bg) !important;
   }
 
   [id^="headlessui-popover-panel"] div button {
-    border-color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark) !important;
   }
 
 
@@ -168,39 +168,69 @@
 
   /* Hide explore addons button */
   a.rounded-md.p-2.w-full.bg-\[\#F59E0B\] {
-    background-color: var(--color-warning-bg);
+    background-color: var(--color-warning-bg) !important;
   }
 
   a.rounded-md.p-2.w-full.bg-\[\#F59E0B\]:hover {
-    background-color: var(--color-warning);
+    background-color: var(--color-warning) !important;
   }
 
-  /* ===== FOOTER===== */
+  /* ===== FOOTER ===== */
   footer {
     background-color: var(--color-bg) !important;
   }
 
-  /* ===== FORM ===== */
+  /* ===== FORM STYLING ===== */
   form.bg-\[\#0f1117\] > div {
     background-color: var(--color-bg-alt) !important;
   }
+
   textarea, input {
     background-color: var(--color-input) !important;
     border: 1px solid var(--color-border) !important;
     color: var(--color-text) !important;
   }
+
   textarea:focus, input:focus {
     background-color: var(--color-input-focus) !important;
     border-color: var(--color-accent) !important;
     outline: none !important;
   }
+
   button.relative.block.w-full {
     background-color: var(--color-success-bg) !important;
     color: var(--color-text) !important;
     border: 1px solid var(--color-border) !important;
   }
+
   button.relative.block.w-full:hover {
     background-color: var(--color-success) !important;
     border-color: var(--color-accent) !important;
   }
+
+  /* ===== CARD STYLING ===== */
+  .aspect-square.border.rounded-md.border-\[\#212A36\].text-center.bg-\[\#1E2129\] {
+    background-color: var(--color-surface) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text) !important;
+  }
+
+  .aspect-square.border.rounded-md.border-\[\#212A36\].text-center.bg-\[\#1E2129\]:hover {
+    border-color: var(--color-success) !important;
+    background-color: var(--color-bg-alt) !important;
+  }
+
+  /* ===== SETTINGS PAGE ===== */
+  .w-full.h-full.border.p-4.rounded-md.border-\[\#212A36\].bg-\[\#1E2129\].max-w-7xl.mb-4 {
+    background-color: var(--color-surface) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text) !important;
+  }
+
+  /* ===== FIXES ===== */
+  /* Fix API key not being blurred */
+  div.relative input.text-xs.px-3 {
+    color: transparent !important;
+  }
+  
 }

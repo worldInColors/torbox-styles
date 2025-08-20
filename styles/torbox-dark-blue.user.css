@@ -203,4 +203,29 @@
     background-color: var(--color-success) !important;
     border-color: var(--color-accent) !important;
   }
+
+  /*  ===== CARD STYLING ===== */
+  .aspect-square.border.rounded-md.border-\[\#212A36\].text-center.bg-\[\#1E2129\] {
+    background-color: var(--color-surface) !important; 
+    border-color: var(--color-border) !important; 
+    color: var(--color-text) !important;
+  }
+
+  .aspect-square.border.rounded-md.border-\[\#212A36\].text-center.bg-\[\#1E2129\]:hover {
+    border-color: var(--color-success) !important; 
+    background-color: var(--color-bg-alt) !important;
+  }
+
+  /* ===== SETTINGS PAGE ===== */
+  .w-full.h-full.border.p-4.rounded-md.border-\[\#212A36\].bg-\[\#1E2129\].max-w-7xl.mb-4 {
+    background-color: var(--color-surface) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text) !important;
+  }
+
+  /* ===== FIXES ===== */
+  /* Fix API key not being blurred */
+  div.relative input.text-xs.px-3 {
+    color: transparent !important;
+  }
 }
