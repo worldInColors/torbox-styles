@@ -233,4 +233,4 @@ If you enjoy these themes and would like to support my work, consider buying me 
 
 ---
 
-_Transform your TorBox experience with beautiful, functional themes._
+_Transform your TorBox experience with beautiful, functional themes_
